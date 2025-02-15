@@ -1,0 +1,38 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.header {
+  @include flex-center;
+  background-color: $background-color;
+  padding: $spacing-unit;
+
+  img {
+    max-height: 30px;
+  }
+
+
+  a {
+    color: $background-color;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@include responsive(tablet) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@include responsive(desktop) {
+  .header {
+    padding: $spacing-unit;
+    display: flex;
+    justify-content: center;
+  }
+}

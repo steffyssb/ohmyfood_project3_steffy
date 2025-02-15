@@ -1,0 +1,42 @@
+// Base Styles
+@use './variables.scss' as*;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    font-family: $font-body;
+    color: $text-color;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-family: $font-title;
+    color: $text-color;
+    text-align: center;
+  }
+  h3 {
+    font-family: $font-body;
+    color: $text-color;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  button {
+    font-family: $font-body;
+    background: $gradient;
+    color: $background-color;
+    border: none;
+    padding: $spacing-unit;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    max-width: 210px;
+  
+    &:hover {
+      background-color: $secondary-color;
+      transform: scale(1.01);
+    }
+  }
+

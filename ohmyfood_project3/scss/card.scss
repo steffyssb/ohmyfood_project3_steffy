@@ -1,0 +1,49 @@
+// Cards
+@use './variables.scss' as*;
+@use './mixins.scss' as*;
+
+.card {
+  background-color: $accent-color;
+  border-radius: 10px;
+  padding: $spacing-unit;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    color: $text-color;
+    text-align: left;
+  }
+
+  p {
+    color: $text-color;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  img {
+    max-height: 280px;
+    max-width: 499px;
+  }
+}
+
+// Responsive Design
+
+@include responsive(tablet) {
+  .card {
+    max-width: 400px;
+  }
+
+}
+
+@include responsive(desktop) {
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+}
